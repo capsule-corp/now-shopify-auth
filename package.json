@@ -1,0 +1,44 @@
+{
+	"name": "now-shopify-auth",
+	"version": "1.0.0",
+	"description": "Authenticate your Next.js app and ZEIT Now serverless functions with Shopify.",
+	"author": {
+		"email": "mokht@rmi.al",
+		"name": "Mokhtar Mial",
+		"url": "https://www.mokhtar.dev"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/m5r/now-shopify-auth.git"
+	},
+	"bugs": {
+		"url": "https://github.com/m5r/now-shopify-auth/issues"
+	},
+	"homepage": "https://github.com/m5r/now-shopify-auth/blob/master/README.md",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"clean": "rm -rf dist",
+		"compile": "tsc -d",
+		"pretest": "npm run clean && npm run compile",
+		"test": "echo 'test'"
+	},
+	"dependencies": {
+		"@shopify/network": "1.4.6",
+		"nonce": "1.0.4",
+		"nookies": "2.0.8",
+		"querystring": "0.2.0",
+		"safe-compare": "1.1.4"
+	},
+	"devDependencies": {
+		"@now/node": "1.4.1",
+		"@types/isomorphic-fetch": "0.0.35",
+		"@types/node": "13.7.1",
+		"@types/safe-compare": "1.1.0",
+		"typescript": "3.7.5"
+	},
+	"peerDependencies": {
+		"isomorphic-fetch": ">=2.0.0"
+	}
+}
