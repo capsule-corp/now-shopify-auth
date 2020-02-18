@@ -1,6 +1,6 @@
 {
 	"name": "now-shopify-auth",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Authenticate your Next.js app and ZEIT Now serverless functions with Shopify.",
 	"author": {
 		"email": "mokht@rmi.al",
