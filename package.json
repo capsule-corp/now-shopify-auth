@@ -15,6 +15,9 @@
 	"bugs": {
 		"url": "https://github.com/capsule-corp/now-shopify-auth/issues"
 	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	},
 	"homepage": "https://github.com/capsule-corp/now-shopify-auth/blob/master/README.md",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
