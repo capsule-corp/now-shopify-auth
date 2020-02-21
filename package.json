@@ -10,12 +10,12 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/m5r/now-shopify-auth.git"
+		"url": "git+https://github.com/capsule-corp/now-shopify-auth.git"
 	},
 	"bugs": {
-		"url": "https://github.com/m5r/now-shopify-auth/issues"
+		"url": "https://github.com/capsule-corp/now-shopify-auth/issues"
 	},
-	"homepage": "https://github.com/m5r/now-shopify-auth/blob/master/README.md",
+	"homepage": "https://github.com/capsule-corp/now-shopify-auth/blob/master/README.md",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
