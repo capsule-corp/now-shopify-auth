@@ -1,4 +1,4 @@
-import { ServerResponse } from "http";
+import { IncomingMessage, ServerResponse } from "http";
 
 export type AccessMode = "online" | "offline";
 
@@ -8,7 +8,7 @@ export interface AuthConfig {
 	myShopifyDomain?: string;
 	accessMode?: "online" | "offline";
 
-	afterAuth?(params: { shopOrigin: string; shopifyToken: string; res: ServerResponse; }): void;
+	afterAuth?(params: { shopOrigin: string; shopifyToken: string; req: IncomingMessage, res: ServerResponse; }): void;
 }
 
 export interface OAuthStartOptions extends AuthConfig {

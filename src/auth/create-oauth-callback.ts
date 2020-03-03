@@ -4,7 +4,6 @@ import querystring from "querystring";
 import { AuthConfig } from "../types";
 import ShopifyError, { ErrorResponse } from "./errors";
 import validateHmac from "./validate-hmac";
-import { setCookie } from "../helpers/nookies";
 
 export default function createOAuthCallback(config: AuthConfig) {
 	return async function oAuthCallback(req: NowRequest, res: NowResponse) {
@@ -77,11 +76,8 @@ export default function createOAuthCallback(config: AuthConfig) {
 		const accessTokenData = await accessTokenResponse.json();
 		const { access_token: accessToken } = accessTokenData;
 
-		setCookie({ res, name: "shopOrigin", value: shop });
-		setCookie({ res, name: "shopifyToken", value: accessToken });
-
 		if (afterAuth) {
-			await afterAuth({ shopOrigin: shop, shopifyToken: accessToken, res });
+			await afterAuth({ shopOrigin: shop, shopifyToken: accessToken, req, res });
 		}
 	};
 }
