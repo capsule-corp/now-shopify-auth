@@ -24,7 +24,7 @@ export function redirectToAuth(
 		routes: Routes;
 	},
 ) {
-	const routeForRedirect = typeof shop === "undefined" ? fallbackRoute : `${authRoute}?shop=${shop}`;
+	const routeForRedirect = shop ? `${authRoute}?shop=${shop}` : fallbackRoute;
 
 	redirect({ res, location: routeForRedirect });
 }
